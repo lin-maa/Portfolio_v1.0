@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Portfolio</title>
+    <link href="portfolio.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <section class="intro">
+        <h1>Lin Ma, <br>Front-end developer</h1>
+    </section>
+    <nav>
+        <script src="portfolio.js"></script>
+        <div class='hamburger'>
+        <ul class='hamburger-content'>
+            <li><a href='#about'>About me</a></li>
+            <li><a href='#portfolio'>Portfolio</a></li>
+            <li><a href='#contacts'>Contacts</a></li>
+            <a class="close" href="#" onclick="navFunction()">&times;</a>
+        </ul>
+        <img src='./imgs/hanburger.svg' alt='menu' onclick="navFunction()">
+    </div>
+    </nav>
+</header>
+<section id="about">
+    <div class='content'>
+        <img src="imgs/personalPhoto.jpg" alt="Personal photo">
+        <div class='summary'>
+            <h2>Personal Summary</h2>
+        <ul>
+            <li>Solid engineering background with experience in programming and ability to learn fast.</li>
+            <li>Self-studied web development skills and willing to learn more.</li>
+            <li>Team player with a Scrum certification and fully aware of the agile development process.</li>
+        </ul>
+    </div>
+</div>
+</section>
+<section id="portfolio">
+    <h2>Portfolio</h2>
+    
+    <div id="popup-window" class="window">
+        <div class="popup">
+            <h2>UX Design of a Furniture Shopping web</h2>
+            <a class="close" href="#">&times;</a>
+            <div class="content">
+                The tech stack of this project includes: <em><b>Adobe XD</b></em></p>
+            </div>
+        </div>
+    </div>
+        <div class='work ux'>
+            <img src="imgs/portfolioUX.png"  alt='UX' >
+            <div class='portfolio-details'>
+            <p>UX of furniture shopping store - <em><b>Adobe XD</b></em></p>
+            <div class='content'>
+                <button class="open-window"><a href='#popup-window'>More details...</a></button>
+            </div>
+            </div>
+        </div>
+        <div class='work web'>
+            <img src="imgs/portfolioweb(ikea).jpg"  alt='web' >
+            <div class='portfolio-details'>
+            <p>Web page - <em><b>HTML CSS</b></em></p>
+            <div class='content'>
+                <button class="open-window"><a href='#popup-window'>More details...</a></button>
+            </div>
+            </div>
+        </div>
+</div>
+</section>
+<section id="contacts">
+    <h2>Contacts</h2>
+    <p>
+        You can contact me at
+        <a href = "mailto: malin.bluebird@gmail.com">
+            malin.bluebird@gmail.com<br>
+        </a>
+        or phone number —— 
+        <a href="tel:0499 354 812">
+            <b>0499 354 812</b>
+        </a> 
+    </p>
+</section>
+<footer>
+    Lin Ma<br>
+    2021
+</footer>
+</body>
+</html>

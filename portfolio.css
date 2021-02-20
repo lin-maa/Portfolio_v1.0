@@ -1,0 +1,323 @@
+body {
+    margin: 0;
+}
+
+h2 {
+    margin:5px;
+    padding:0;
+    text-align: center;
+    color: teal;
+}
+
+h3 {
+    margin: 5px;
+    text-align: center;
+}
+
+p {
+    margin:5px;
+    padding:0;
+}
+
+header {
+    background-image: url('./imgs/portfolioUX.png');
+    display: flex;
+    justify-content: space-between;
+    /* height: 130px; */
+}
+header > .intro {
+    margin-left: 10%;
+    padding:20px;
+    display: flex;
+    align-items: flex-end;
+    text-align: left;
+    color:gray;
+    background-color: black;
+}
+
+header h1{
+ margin:0;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-around;
+    position: relative;
+}
+
+nav img{
+  width:3vw;
+  height:auto;
+  position: absolute;
+  right:10px;
+  top:10px;
+}
+.hamburger-content {
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+  padding:10px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav li {
+  line-height: 0.75vw;
+  font-size: 2vw;
+  box-sizing: border-box;
+  width: 100px;
+  justify-content: center;
+}
+
+
+#about {
+    background-color:#EBEDEF ;
+    margin:10px 0;
+}
+
+#about .content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#about img {
+    /* z-index: -1; */
+    /* position: absolute; */
+    margin:10px;
+    width: 30%;
+    height:auto;
+    border-radius: 50%;
+    border-style: outset;
+    border-width: 1vw;
+    /* max-width: 100%; */
+}
+#about .summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width:60%;
+ }
+
+ .summary li {
+     margin:8px;
+ }
+
+#portfolio {
+    /* color:#73C6B6; */
+    background-color: #D5DBDB ;
+}
+
+#portfolio img {
+    width: 100%;
+}
+
+#portfolio .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#portfolio .content .work {
+    margin:10px;
+    border-style: outset;
+    border-width: 1vw;
+/* max-width: 50%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contacts {
+    box-sizing: border-box;
+    margin: 20px;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+footer {
+    color:whitesmoke;
+    background-color: black;
+    text-align: center;
+    box-sizing: border-box;
+    padding:10px;
+}
+
+.portfolio-details{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.open-window {
+    width:150px;
+    text-align: center;
+    height:auto;
+    font-size: 1em;
+    padding: 10px;
+    color: #fff;
+    font-size:16px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: cadetblue;
+    border: 2px solid black;
+    border-radius: 20px/50px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+  }
+  .open-window:hover {
+    background:  black;
+  }
+
+  /* .open-window:active{
+
+} */
+
+/* .window {
+    display: flex;
+    background-color: black;
+    width:200px;
+    height:180px;
+} */
+
+/* .open-window .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  } */
+
+  /* .box {
+    width: 40%;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.2);
+    padding: 35px;
+    border: 2px solid #fff;
+    border-radius: 20px/50px;
+    background-clip: padding-box;
+    text-align: center;
+  } */
+  .window {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .window:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .popup {
+    background-image: url("./imgs/popupBack.png");
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 40%;
+    position: relative;
+    transition: all 5s ease-in-out;
+  }
+  
+  .popup h2 {
+    box-sizing: border-box;
+    padding:10px;
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+  }
+  .popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .popup .close:hover {
+    color:black;
+  }
+  .popup .popup-text {
+    max-height: 30%;
+    overflow: auto;
+  }
+  
+  @media screen and (max-width: 700px){
+    .box{
+      width: 70%;
+    }
+    .popup{
+      width: 70%;
+    }
+  }
+  
+
+  /* Popup container - can be anything you want */
+/* .popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  } */
+  
+  /* The actual popup */
+  /* .popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+  } */
+  
+  /* Popup arrow */
+  /* .popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  } */
+  
+  /* Toggle this class - hide and show the popup */
+  /* .popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  } */
+  
+  /* Add animation (fade in the popup) */
+  /* @-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  } */
